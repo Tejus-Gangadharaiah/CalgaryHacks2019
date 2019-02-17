@@ -199,7 +199,6 @@ void edit_road(){
 }
 
 void mouseClicked(){
-  print(roadd);
   if (addnode == 1){
     if (mouseY < 1.2*height/8){
       
@@ -259,33 +258,6 @@ void mouseClicked(){
 }
 
 void keyPressed(){
-   if (roadd == -5) {
-    roadd = 1;
-    new_road();
-  }
-  if (roadd == -1){
-    for (int i = 0;i < numn; i++){
-      if (sqrt(pow(mouseX-nodes[i].x, 2)+pow(mouseY-nodes[i].y,2)) 
-                    < .01*(width/2+height/2)){
-        cnode = i;
-        roadd = 2;
-        new_road();
-      }
-    }
-  }
-  if (roadd == 3){
-    new_road();
-  }
-  if (roadd == -2){
-    for (int i = 0; i < numn; i++){
-      if (sqrt(pow(mouseX-nodes[i].x, 2)+pow(mouseY-nodes[i].y,2)) 
-                    < .01*(width/2+height/2)){
-        cnode2 = i;
-        roadd = 4;
-        new_road();
-      }
-    }
-  }
   if (key == 'm'){
     if (m == 0)
       m = 1;
